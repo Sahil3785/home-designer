@@ -17,7 +17,7 @@ import {
   GITHUB_REPO_URL,
   GITHUB_RELEASES_URL,
   DIRECT_MAC_DMG_DOWNLOAD,
-  GITHUB_WIN_EXE_DOWNLOAD,
+  DIRECT_WIN_EXE_DOWNLOAD,
 } from '../../core/platform';
 
 interface DownloadPageProps {
@@ -288,9 +288,8 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
 
             <div>
               <a
-                href={GITHUB_WIN_EXE_DOWNLOAD}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={DIRECT_WIN_EXE_DOWNLOAD}
+                download="HomeDesigner_1.0.0_x64_en-US.msi"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
