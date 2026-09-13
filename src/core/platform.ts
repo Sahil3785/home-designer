@@ -43,9 +43,11 @@ export function getClientOS(): OperatingSystem {
 }
 
 /**
- * Default download links for releases hosted on GitHub.
+ * Download links.
+ * Mac DMG is hosted directly on Vercel for instant 100% reliable 1-click download!
  */
-export const GITHUB_REPO_URL = 'https://github.com/sahil3785/home-designer';
-export const GITHUB_RELEASES_URL = `${GITHUB_REPO_URL}/releases/latest`;
-export const GITHUB_MAC_DMG_DOWNLOAD = `${GITHUB_REPO_URL}/releases/latest/download/HomeDesigner_1.0.0_aarch64.dmg`;
-export const GITHUB_WIN_EXE_DOWNLOAD = `${GITHUB_REPO_URL}/releases/latest/download/HomeDesigner_1.0.0_x64_en-US.msi`;
+export const GITHUB_REPO_URL = 'https://github.com/Sahil3785/home-designer';
+export const GITHUB_RELEASES_URL = `${GITHUB_REPO_URL}/releases`;
+export const DIRECT_MAC_DMG_DOWNLOAD = '/downloads/HomeDesigner_1.0.0_aarch64.dmg';
+export const GITHUB_WIN_EXE_DOWNLOAD = `${GITHUB_REPO_URL}/releases`;
+

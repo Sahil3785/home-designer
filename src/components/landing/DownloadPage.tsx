@@ -16,7 +16,7 @@ import {
   getClientOS,
   GITHUB_REPO_URL,
   GITHUB_RELEASES_URL,
-  GITHUB_MAC_DMG_DOWNLOAD,
+  DIRECT_MAC_DMG_DOWNLOAD,
   GITHUB_WIN_EXE_DOWNLOAD,
 } from '../../core/platform';
 
@@ -186,9 +186,8 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
 
             <div>
               <a
-                href={GITHUB_MAC_DMG_DOWNLOAD}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={DIRECT_MAC_DMG_DOWNLOAD}
+                download="HomeDesigner_1.0.0_aarch64.dmg"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
