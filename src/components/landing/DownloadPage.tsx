@@ -289,7 +289,7 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
             <div>
               <a
                 href={DIRECT_WIN_EXE_DOWNLOAD}
-                download="HomeDesigner_1.0.0_x64_en-US.msi"
+                download="HomeDesigner_1.0.0_x64-setup.exe"
                 style={{
                   display: 'flex',
                   alignItems: 'center',

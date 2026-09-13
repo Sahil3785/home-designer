@@ -48,6 +48,7 @@ export function getClientOS(): OperatingSystem {
 export const GITHUB_REPO_URL = 'https://github.com/Sahil3785/home-designer';
 export const GITHUB_RELEASES_URL = `${GITHUB_REPO_URL}/releases`;
 export const DIRECT_MAC_DMG_DOWNLOAD = '/downloads/HomeDesigner_1.0.0_aarch64.dmg';
-export const DIRECT_WIN_EXE_DOWNLOAD = '/downloads/HomeDesigner_1.0.0_x64_en-US.msi';
+export const DIRECT_WIN_EXE_DOWNLOAD = '/downloads/HomeDesigner_1.0.0_x64-setup.exe';
+
 
 
