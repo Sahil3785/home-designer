@@ -22,12 +22,10 @@ import {
 
 interface DownloadPageProps {
   onBackToHome: () => void;
-  onLaunchStudio: () => void;
 }
 
 export const DownloadPage: React.FC<DownloadPageProps> = ({
   onBackToHome,
-  onLaunchStudio,
 }) => {
   const currentOS = getClientOS();
 
@@ -80,25 +78,7 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
           <span style={{ fontSize: 15, fontWeight: 700, color: '#0f172a' }}>Home Designer PRO</span>
         </div>
 
-        <button
-          onClick={onLaunchStudio}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 6,
-            fontSize: 13,
-            fontWeight: 600,
-            color: '#2563eb',
-            background: '#eff6ff',
-            border: '1px solid #bfdbfe',
-            padding: '7px 14px',
-            borderRadius: 8,
-            cursor: 'pointer',
-          }}
-        >
-          <Globe size={14} />
-          <span>Launch Web Studio</span>
-        </button>
+        <div style={{ width: 100 }} />
       </header>
 
       {/* ─── Main Content ─── */}
@@ -340,7 +320,7 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
           </div>
         </div>
 
-        {/* ─── Web Cloud Studio Callout ─── */}
+        {/* ─── Native App Performance Features ─── */}
         <div
           style={{
             background: '#ffffff',
@@ -368,34 +348,15 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
                 color: '#2563eb',
               }}
             >
-              <Globe size={24} />
+              <Zap size={24} />
             </div>
             <div>
-              <h4 style={{ margin: '0 0 4px', fontSize: 16, fontWeight: 700 }}>Don't want to install anything?</h4>
+              <h4 style={{ margin: '0 0 4px', fontSize: 16, fontWeight: 700 }}>100% Offline & GPU Accelerated</h4>
               <p style={{ margin: 0, fontSize: 13, color: '#64748b' }}>
-                Launch the Cloud Web Studio directly inside Chrome, Safari, Edge, or Firefox with full 2D & 3D capabilities.
+                Runs completely on your computer with zero internet requirement, full local file privacy, and instant 3D hardware rendering.
               </p>
             </div>
           </div>
-
-          <button
-            onClick={onLaunchStudio}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 6,
-              padding: '10px 20px',
-              borderRadius: 8,
-              background: '#2563eb',
-              color: '#ffffff',
-              fontSize: 13,
-              fontWeight: 700,
-              border: 'none',
-              cursor: 'pointer',
-            }}
-          >
-            <span>Open Web Studio Now</span>
-          </button>
         </div>
 
         {/* ─── GitHub Releases Hub ─── */}

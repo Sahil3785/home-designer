@@ -23,12 +23,10 @@ import {
 import { GITHUB_REPO_URL, GITHUB_RELEASES_URL } from '../../core/platform';
 
 interface LandingPageProps {
-  onStartDesigning: () => void;
   onNavigateDownload: () => void;
 }
 
 export const LandingPage: React.FC<LandingPageProps> = ({
-  onStartDesigning,
   onNavigateDownload,
 }) => {
   const features = [
@@ -188,27 +186,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               alignItems: 'center',
               gap: 6,
               fontSize: 13,
-              fontWeight: 600,
-              color: '#0f172a',
-              background: '#f1f5f9',
-              border: '1px solid #e2e8f0',
-              padding: '7px 14px',
-              borderRadius: 8,
-              cursor: 'pointer',
-              transition: 'all 0.15s ease',
-            }}
-          >
-            <Download size={14} />
-            <span>Download Desktop</span>
-          </button>
-          <button
-            onClick={onStartDesigning}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 6,
-              fontSize: 13,
-              fontWeight: 600,
+              fontWeight: 700,
               color: '#ffffff',
               background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
               border: 'none',
@@ -219,8 +197,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               transition: 'all 0.15s ease',
             }}
           >
-            <Globe size={14} />
-            <span>Start Designing (Free)</span>
+            <Download size={14} />
+            <span>Download Desktop App</span>
           </button>
         </div>
       </header>
@@ -289,7 +267,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         {/* Hero CTAs */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
           <button
-            onClick={onStartDesigning}
+            onClick={onNavigateDownload}
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -306,12 +284,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               transition: 'all 0.15s ease',
             }}
           >
-            <span>Start Designing for Free</span>
+            <Download size={18} />
+            <span>Download for Mac & Windows</span>
             <ArrowRight size={16} />
           </button>
 
-          <button
-            onClick={onNavigateDownload}
+          <a
+            href="#features"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -323,14 +302,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               border: '1px solid #cbd5e1',
               padding: '14px 24px',
               borderRadius: 10,
-              cursor: 'pointer',
+              textDecoration: 'none',
               boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)',
               transition: 'all 0.15s ease',
             }}
           >
-            <Download size={16} color="#2563eb" />
-            <span>Download for Mac / Windows</span>
-          </button>
+            <span>Explore All Features</span>
+          </a>
         </div>
 
         {/* Feature Highlights Pills */}
@@ -454,7 +432,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               </div>
 
               <button
-                onClick={onStartDesigning}
+                onClick={onNavigateDownload}
                 style={{
                   width: '100%',
                   padding: '10px 14px',
@@ -472,7 +450,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                   transition: 'all 0.15s ease',
                 }}
               >
-                <span>Open in Studio</span>
+                <span>Download App & Open</span>
                 <ArrowRight size={14} />
               </button>
             </div>
@@ -560,13 +538,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
               onClick={onNavigateDownload}
               style={{ background: 'transparent', border: 'none', color: '#2563eb', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}
             >
-              Download Center
-            </button>
-            <button
-              onClick={onStartDesigning}
-              style={{ background: 'transparent', border: 'none', color: '#2563eb', fontSize: 13, fontWeight: 600, cursor: 'pointer' }}
-            >
-              Launch Studio
+              Download App
             </button>
           </div>
         </div>
