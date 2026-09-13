@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="85%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="40%" stop-color="#334155"/>
+      <stop offset="70%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="wheel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#bg)"/>
+
+  <!-- Paved Parking Bay Outline -->
+  <rect x="70" y="80" width="460" height="440" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="4" stroke-dasharray="16 12"/>
+
+  <!-- Yellow Parking Bay Guidelines -->
+  <line x1="90" y1="110" x2="510" y2="110" stroke="#fbbf24" stroke-width="6"/>
+  <line x1="90" y1="490" x2="510" y2="490" stroke="#fbbf24" stroke-width="6"/>
+
+  <!-- Shadow under car -->
+  <ellipse cx="300" cy="380" rx="200" ry="24" fill="#0f172a" opacity="0.35"/>
+
+  <!-- Modern Luxury Sedan Car (Side 3/4 View) -->
+  <g filter="url(#shadow)">
+    <!-- Main Car Body Silhouette -->
+    <path d="M 120 330 
+             Q 130 310 160 300 
+             L 220 275 
+             Q 280 215 360 215 
+             L 420 215 
+             Q 450 220 470 270 
+             L 500 290 
+             Q 520 310 515 340 
+             L 500 355 
+             L 450 355 
+             Q 440 320 400 320 
+             Q 360 320 350 355 
+             L 250 355 
+             Q 240 320 200 320 
+             Q 160 320 150 355 
+             L 120 355 Z" 
+          fill="url(#carBody)"/>
+
+    <!-- Cabin Roof & Windows -->
+    <path d="M 235 275 
+             Q 285 225 355 225 
+             L 415 225 
+             Q 440 230 455 275 Z" 
+          fill="url(#glass)"/>
+    <line x1="345" y1="225" x2="345" y2="275" stroke="#1e293b" stroke-width="6"/>
+
+    <!-- Headlight & Taillight -->
+    <path d="M 505 310 Q 520 320 515 330 L 495 325 Z" fill="#38bdf8"/>
+    <path d="M 120 325 Q 125 330 135 330 L 125 345 Z" fill="#ef4444"/>
+
+    <!-- Front Wheel -->
+    <circle cx="400" cy="355" r="36" fill="url(#wheel)"/>
+    <circle cx="400" cy="355" r="22" fill="#94a3b8" stroke="#f8fafc" stroke-width="4"/>
+    <circle cx="400" cy="355" r="8" fill="#1e293b"/>
+
+    <!-- Rear Wheel -->
+    <circle cx="200" cy="355" r="36" fill="url(#wheel)"/>
+    <circle cx="200" cy="355" r="22" fill="#94a3b8" stroke="#f8fafc" stroke-width="4"/>
+    <circle cx="200" cy="355" r="8" fill="#1e293b"/>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+name: Release Multi-Platform Desktop Apps (macOS & Windows)
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: 'macos-latest'
+            args: '--bundles dmg'
+          - platform: 'windows-latest'
+            args: '--bundles msi,nsis'
+
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Setup Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Build Web Assets
+        run: npm run build
+
+      - name: Build Tauri Desktop Bundle
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: 'Home Designer PRO ${{ github.ref_name }}'
+          releaseBody: |
+            ## 🏠 Home Designer PRO Release
+            
+            ### 📦 Download Packages
+            - **macOS (Apple Silicon & Intel)**: `HomeDesigner_${{ github.ref_name }}_aarch64.dmg`
+            - **Windows (10 / 11 64-bit)**: `HomeDesigner_${{ github.ref_name }}_x64_en-US.msi` or `.exe`
+            
+            ### 🚀 Features Included:
+            - 📏 Pure 100% Feet & Inches CAD Drafting Engine
+            - 🧊 Real-Time 2D Plan & 3D Perspective Orbit
+            - ✨ Inbuilt Smart AI Floor Plan Generator (100% Offline)
+            - 🍳 Modular Kitchen & Cabinetry Studio
+            - 🧭 9-Zone Vastu Shastra Compliance Analysis
+            - 🌳 Site Planning, Setbacks & Outdoor Living
+            - 📊 Area Schedule BOQ & Cost Estimator (₹ / $)
+            - 🖨️ High-Resolution Blueprint Sheet Export (PDF/PNG)
+          releaseDraft: false
+          prerelease: false
+          args: ${{ matrix.args }}

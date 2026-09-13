@@ -1,0 +1,131 @@
+:root {
+  /* Modern Professional Architectural Studio Theme */
+  --bg-app: #f1f5f9;
+  --bg-panel: #ffffff;
+  --bg-panel-secondary: #f8fafc;
+  --bg-panel-tertiary: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --bg-surface-active: #2563eb;
+  
+  --border-subtle: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-strong: #94a3b8;
+  --border-highlight: #3b82f6;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-accent: #2563eb;
+
+  --accent-blue: #2563eb;
+  --accent-blue-hover: #1d4ed8;
+  --accent-blue-subtle: #eff6ff;
+  --accent-emerald: #10b981;
+  --accent-emerald-subtle: #ecfdf5;
+  --accent-amber: #f59e0b;
+  --accent-amber-subtle: #fffbeb;
+  --accent-rose: #f43f5e;
+  --accent-rose-subtle: #fff1f2;
+  --accent-indigo: #6366f1;
+  --accent-indigo-subtle: #eef2ff;
+  --accent-cyan: #06b6d4;
+
+  /* 2D CAD Canvas */
+  --canvas-bg: #ffffff;
+  --ruler-bg: #f8fafc;
+  --grid-major: rgba(15, 23, 42, 0.08);
+  --grid-minor: rgba(15, 23, 42, 0.03);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
+  --font-cad: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+
+  /* Precision UI Depth Elevations */
+  --elevation-surface: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --elevation-panel: 0 4px 12px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --elevation-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --elevation-dropdown: 0 12px 28px -4px rgba(15, 23, 42, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --glass-modal-bg: rgba(15, 23, 42, 0.72);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+input {
+  font-family: var(--font-sans);
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  outline: none;
+  font-size: 12px;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-xs);
+}
+
+input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
