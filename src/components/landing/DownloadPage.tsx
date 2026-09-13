@@ -32,7 +32,7 @@ export const DownloadPage: React.FC<DownloadPageProps> = ({
   const currentOS = getClientOS();
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8fafc', color: '#0f172a', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div style={{ minHeight: '100vh', width: '100%', background: '#f8fafc', color: '#0f172a', fontFamily: 'system-ui, -apple-system, sans-serif', overflowX: 'hidden' }}>
       {/* ─── Top Navbar ─── */}
       <header
         style={{

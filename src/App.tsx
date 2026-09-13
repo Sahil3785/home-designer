@@ -1157,6 +1157,8 @@ export function App({ onNavigateHome, onNavigateDownload }: AppProps = {}) {
         height: '100vh',
         width: '100vw',
         overflow: 'hidden',
+        position: 'fixed',
+        inset: 0,
       }}
     >
       {/* Title Bar */}
